@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>All Products — Pratheeksha Fine Jewellery</title>
+  <meta name="description" content="Explore our complete collection of handcrafted jewellery. Necklaces, earrings, rings, and more. Find your perfect piece at Pratheeksha.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Pratheeksha homepage">
+        <img src="images/prateeksha_logo.jpeg" alt="Pratheeksha logo" class="mark" style="width:44px;height:44px;border-radius:10px;">
+        <span class="brand-name">Pratheeksha</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#best">Best Sellers</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="login.html" class="auth-nav-link">Login</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span>☰</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Products Header -->
+    <section class="products-header">
+      <div class="container">
+        <div class="products-intro">
+          <h1>Our Complete Collection</h1>
+          <p>Discover our handcrafted jewellery pieces, each telling a unique story of elegance and tradition.</p>
+        </div>
+        
+        <!-- Search and Filter Bar -->
+        <div class="products-controls">
+          <div class="search-bar">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search products..." class="search-input">
+          </div>
+          
+          <div class="filter-controls">
+            <select id="category-filter" class="filter-select">
+              <option value="">All Categories</option>
+              <option value="necklace">Necklaces</option>
+              <option value="earrings">Earrings</option>
+              <option value="rings">Rings</option>
+              <option value="sets">Jewellery Sets</option>
+            </select>
+            
+            <select id="price-filter" class="filter-select">
+              <option value="">All Prices</option>
+              <option value="0-500">Under ₹500</option>
+              <option value="500-1000">₹500 - ₹1000</option>
+              <option value="1000+">Above ₹1000</option>
+            </select>
+            
+            <button id="clear-filters" class="btn secondary">Clear Filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-stats">
+          <p id="products-count">Showing <span id="count">12</span> of <span id="total">12</span> products</p>
+        </div>
+        
+        <div class="products-grid" id="products-grid">
+          <!-- Temple Collection -->
+          <article class="product-card" data-category="sets" data-price="899" data-name="temple short jewellery">
+            <div class="product-media">
+              <img src="images/temple_short_jewellery_set.jpeg" alt="Temple short jewellery set">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Temple Short Jewellery Set</h3>
+              <div class="product-sub">Traditional temple design, gold-plated finish</div>
+              <div class="price-row">
+                <span class="price">₹899</span>
+                <span class="badge">New</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="necklace" data-price="599" data-name="lekshmi choker">
+            <div class="product-media">
+              <img src="images/lekshmi_choker.jpeg" alt="Lekshmi choker">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Lekshmi Choker</h3>
+              <div class="product-sub">Goddess Lakshmi inspired, gold-plated choker</div>
+              <div class="price-row">
+                <span class="price">₹599</span>
+                <span class="badge">Best Seller</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="necklace" data-price="999" data-name="lotus neck chain red">
+            <div class="product-media">
+              <img src="images/lotus_neck_chain.jpeg" alt="Lotus Neck Chain Red">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Lotus Neck Chain Red</h3>
+              <div class="product-sub">Lotus flower design, red stone embellished</div>
+              <div class="price-row">
+                <span class="price">₹999</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sets" data-price="499" data-name="lekshmi palaka set">
+            <div class="product-media">
+              <img src="images/Lekshmi_palaka_set.jpeg" alt="Lekshmi Palaka Set">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Lekshmi Palaka Set</h3>
+              <div class="product-sub">Lakshmi goddess design, palaka style necklace</div>
+              <div class="price-row">
+                <span class="price">₹499</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sets" data-price="999" data-name="temple long haram set">
+            <div class="product-media">
+              <img src="images/temple_long_haram.jpeg" alt="Temple Long Haram Set">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Temple Long Haram Set</h3>
+              <div class="product-sub">Traditional temple haram, long necklace design</div>
+              <div class="price-row">
+                <span class="price">₹999</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="necklace" data-price="699" data-name="lotus neck chain blue">
+            <div class="product-media">
+              <img src="images/lotus_neck_chain_blue.jpeg" alt="Lotus Neck Chain Blue">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Lotus Neck Chain Blue</h3>
+              <div class="product-sub">Lotus flower design, blue stone embellished</div>
+              <div class="price-row">
+                <span class="price">₹699</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Additional Products (Dummy data for demonstration) -->
+          <article class="product-card" data-category="earrings" data-price="399" data-name="traditional jhumka earrings">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Traditional Jhumka Earrings">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Traditional Jhumka Earrings</h3>
+              <div class="product-sub">Classic jhumka design with gold plating</div>
+              <div class="price-row">
+                <span class="price">₹399</span>
+                <span class="badge">Popular</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="rings" data-price="299" data-name="gemstone ring">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gemstone Ring">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Gemstone Ring</h3>
+              <div class="product-sub">Elegant ring with natural gemstone</div>
+              <div class="price-row">
+                <span class="price">₹299</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="necklace" data-price="799" data-name="pearl necklace">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pearl Necklace">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Pearl Necklace</h3>
+              <div class="product-sub">Elegant freshwater pearl necklace</div>
+              <div class="price-row">
+                <span class="price">₹799</span>
+                <span class="badge">Limited</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sets" data-price="1299" data-name="bridal jewellery set">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bridal Jewellery Set">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Bridal Jewellery Set</h3>
+              <div class="product-sub">Complete bridal set with necklace and earrings</div>
+              <div class="price-row">
+                <span class="price">₹1,299</span>
+                <span class="badge">Premium</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="earrings" data-price="449" data-name="chandbali earrings">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Chandbali Earrings">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Chandbali Earrings</h3>
+              <div class="product-sub">Traditional chandbali design with stone work</div>
+              <div class="price-row">
+                <span class="price">₹449</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="rings" data-price="349" data-name="designer ring">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Designer Ring">
+              <div class="product-overlay">
+                <button class="quick-view-btn">Quick View</button>
+              </div>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Designer Ring</h3>
+              <div class="product-sub">Contemporary design with traditional elements</div>
+              <div class="price-row">
+                <span class="price">₹349</span>
+              </div>
+              <div class="product-actions">
+                <a class="btn secondary" href="#">View Details</a>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="center" style="margin-top:3rem;">
+          <button class="btn" id="load-more-btn">Load More Products</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container center">
+      <small>© <span id="year"></span> Pratheeksha. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Products page specific functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.getElementById('search-input');
+      const categoryFilter = document.getElementById('category-filter');
+      const priceFilter = document.getElementById('price-filter');
+      const clearFiltersBtn = document.getElementById('clear-filters');
+      const productsGrid = document.getElementById('products-grid');
+      const productsCount = document.getElementById('count');
+      const totalProducts = document.getElementById('total');
+      const loadMoreBtn = document.getElementById('load-more-btn');
+      
+      let allProducts = Array.from(productsGrid.children);
+      let visibleProducts = allProducts;
+      let currentPage = 1;
+      const productsPerPage = 6;
+
+      // Initialize
+      updateProductCount();
+      setupEventListeners();
+
+      function setupEventListeners() {
+        // Search functionality
+        searchInput.addEventListener('input', filterProducts);
+        
+        // Filter functionality
+        categoryFilter.addEventListener('change', filterProducts);
+        priceFilter.addEventListener('change', filterProducts);
+        
+        // Clear filters
+        clearFiltersBtn.addEventListener('click', clearAllFilters);
+        
+        // Load more
+        loadMoreBtn.addEventListener('click', loadMoreProducts);
+        
+        // Quick view buttons
+        document.querySelectorAll('.quick-view-btn').forEach(btn => {
+          btn.addEventListener('click', showQuickView);
+        });
+        
+        // Wishlist buttons
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+          btn.addEventListener('click', toggleWishlist);
+        });
+      }
+
+      function filterProducts() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
+        const priceRange = priceFilter.value;
+
+        visibleProducts = allProducts.filter(product => {
+          const name = product.dataset.name.toLowerCase();
+          const productCategory = product.dataset.category;
+          const price = parseInt(product.dataset.price);
+          
+          // Search filter
+          const matchesSearch = name.includes(searchTerm);
+          
+          // Category filter
+          const matchesCategory = !category || productCategory === category;
+          
+          // Price filter
+          let matchesPrice = true;
+          if (priceRange) {
+            const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+            matchesPrice = price >= min && (max === Infinity ? true : price <= max);
+          }
+          
+          return matchesSearch && matchesCategory && matchesPrice;
+        });
+
+        displayProducts();
+        updateProductCount();
+      }
+
+      function displayProducts() {
+        const startIndex = 0;
+        const endIndex = currentPage * productsPerPage;
+        const productsToShow = visibleProducts.slice(startIndex, endIndex);
+        
+        // Hide all products
+        allProducts.forEach(product => {
+          product.style.display = 'none';
+        });
+        
+        // Show filtered products
+        productsToShow.forEach(product => {
+          product.style.display = 'block';
+        });
+        
+        // Show/hide load more button
+        loadMoreBtn.style.display = visibleProducts.length > endIndex ? 'inline-block' : 'none';
+      }
+
+      function loadMoreProducts() {
+        currentPage++;
+        displayProducts();
+      }
+
+      function clearAllFilters() {
+        searchInput.value = '';
+        categoryFilter.value = '';
+        priceFilter.value = '';
+        currentPage = 1;
+        visibleProducts = allProducts;
+        displayProducts();
+        updateProductCount();
+      }
+
+      function updateProductCount() {
+        const visibleCount = Math.min(visibleProducts.length, currentPage * productsPerPage);
+        productsCount.textContent = visibleCount;
+        totalProducts.textContent = visibleProducts.length;
+      }
+
+      function showQuickView(e) {
+        const productCard = e.target.closest('.product-card');
+        const productName = productCard.querySelector('.product-title').textContent;
+        const productPrice = productCard.querySelector('.price').textContent;
+        
+        // Create a simple modal (you can enhance this)
+        const modal = document.createElement('div');
+        modal.className = 'quick-view-modal';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>${productName}</h3>
+              <button class="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+              <p>Price: ${productPrice}</p>
+              <p>This is a quick preview of the product. Click "View Details" for more information.</p>
+              <div class="modal-actions">
+                <a class="btn" href="#">View Full Details</a>
+                <button class="btn secondary close-modal">Close</button>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Close modal functionality
+        modal.querySelectorAll('.close-modal').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.body.removeChild(modal);
+          });
+        });
+        
+        // Close on outside click
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            document.body.removeChild(modal);
+          }
+        });
+      }
+
+      function toggleWishlist(e) {
+        const btn = e.currentTarget;
+        const isWishlisted = btn.classList.contains('wishlisted');
+        
+        if (isWishlisted) {
+          btn.classList.remove('wishlisted');
+          btn.style.color = 'var(--muted)';
+          showNotification('Removed from wishlist');
+        } else {
+          btn.classList.add('wishlisted');
+          btn.style.color = '#e74c3c';
+          showNotification('Added to wishlist');
+        }
+      }
+
+      function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+          notification.classList.add('show');
+        }, 100);
+        
+        setTimeout(() => {
+          notification.classList.remove('show');
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 2000);
+      }
+
+      // Update footer year
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html> 

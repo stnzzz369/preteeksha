@@ -3,18 +3,52 @@
 // Mobile menu toggle
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelector(".nav-links");
+    const header = document.querySelector(".site-header");
 
-    if (menuToggle && navMenu) {
+    if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
+            // Toggle nav-open class on header for mobile menu
+            header.classList.toggle("nav-open");
             menuToggle.classList.toggle("active");
+            
+            // Update menu icon
+            const menuIcon = menuToggle.querySelector("span");
+            if (header.classList.contains("nav-open")) {
+                menuIcon.textContent = "✕"; // Close icon
+                menuIcon.style.fontSize = "1.2rem";
+            } else {
+                menuIcon.textContent = "☰"; // Hamburger icon
+                menuIcon.style.fontSize = "1rem";
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!header.contains(e.target) && header.classList.contains("nav-open")) {
+                header.classList.remove("nav-open");
+                menuToggle.classList.remove("active");
+                const menuIcon = menuToggle.querySelector("span");
+                menuIcon.textContent = "☰";
+                menuIcon.style.fontSize = "1rem";
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && header.classList.contains("nav-open")) {
+                header.classList.remove("nav-open");
+                menuToggle.classList.remove("active");
+                const menuIcon = menuToggle.querySelector("span");
+                menuIcon.textContent = "☰";
+                menuIcon.style.fontSize = "1rem";
+            }
         });
     }
 
-    // Smooth scrolling for nav links
-    const navLinks = document.querySelectorAll(".nav-menu a[href^='#']");
-    navLinks.forEach(link => {
+    // Smooth scrolling for nav links (including mobile menu links)
+    const allNavLinks = document.querySelectorAll(".nav-links a[href^='#']");
+    allNavLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href");
@@ -24,8 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     behavior: "smooth",
                     block: "start"
                 });
-                navMenu.classList.remove("active");
-                menuToggle.classList.remove("active");
+                // Close mobile menu after clicking a link
+                if (header && header.classList.contains("nav-open")) {
+                    header.classList.remove("nav-open");
+                    menuToggle.classList.remove("active");
+                    const menuIcon = menuToggle.querySelector("span");
+                    menuIcon.textContent = "☰";
+                    menuIcon.style.fontSize = "1rem";
+                }
             }
         });
     });
