@@ -48,15 +48,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Slideshow functionality
     const slideshowContainer = document.querySelector(".slideshow-container");
+    console.log("Slideshow container found:", slideshowContainer);
     if (slideshowContainer) {
         const slides = slideshowContainer.querySelectorAll(".slide");
         const slideButtons = slideshowContainer.querySelectorAll(".slide-btn");
+        console.log("Found slides:", slides.length, "Found buttons:", slideButtons.length);
         let currentSlide = 0;
         let slideInterval;
         let isTransitioning = false;
 
+        // Ensure first slide is active on load
+        if (slides.length > 0) {
+            slides[0].classList.add("active");
+            if (slideButtons.length > 0) {
+                slideButtons[0].classList.add("active");
+            }
+        }
+
         function showSlide(index) {
-            if (isTransitioning) return; // Prevent multiple transitions
+            if (isTransitioning || index < 0 || index >= slides.length) return;
             
             isTransitioning = true;
             
@@ -66,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Add active class to current slide and button
             slides[index].classList.add("active");
-            slideButtons[index].classList.add("active");
+            if (slideButtons[index]) {
+                slideButtons[index].classList.add("active");
+            }
             
             currentSlide = index;
             
@@ -77,26 +89,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function nextSlide() {
-            if (isTransitioning) return; // Don't transition if already transitioning
+            if (isTransitioning) return;
             const nextIndex = (currentSlide + 1) % slides.length;
             showSlide(nextIndex);
         }
 
         function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 6500); // 4 seconds + 2.5 seconds transition
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+            slideInterval = setInterval(nextSlide, 6500);
         }
 
         function stopSlideshow() {
-            clearInterval(slideInterval);
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
         }
 
         // Add click event listeners to slide buttons
         slideButtons.forEach((button, index) => {
             button.addEventListener("click", () => {
-                if (isTransitioning) return; // Prevent clicking during transition
+                if (isTransitioning) return;
                 stopSlideshow();
                 showSlide(index);
-                startSlideshow(); // Restart the slideshow
+                startSlideshow();
             });
         });
 
@@ -104,8 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
         slideshowContainer.addEventListener("mouseenter", stopSlideshow);
         slideshowContainer.addEventListener("mouseleave", startSlideshow);
 
-        // Start the slideshow
-        startSlideshow();
+        // Start the slideshow after a short delay to ensure everything is loaded
+        setTimeout(() => {
+            startSlideshow();
+            console.log("Slideshow started");
+        }, 1000);
+    } else {
+        console.log("Slideshow container not found");
     }
     
     // Add smooth scroll behavior for better UX
